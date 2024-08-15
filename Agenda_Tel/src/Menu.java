@@ -25,7 +25,7 @@ public class Menu {
                     Agenda.adicionarContato(Agenda.matriz);
                     break;
                 case 2:
-                    Agenda.exibirContato();
+                    Agenda.exibirContatos();
                     break;
                 case 3:
                     Agenda.editarContato(Agenda.matriz);
