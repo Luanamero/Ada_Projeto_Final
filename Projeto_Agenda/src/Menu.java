@@ -3,49 +3,74 @@ import java.util.Scanner;
 public class Menu {
 
     Scanner input = new Scanner(System.in);
-    static int  resposta = 0;
+    static String resposta;
 
 
 
     public static void menu() {
         do {
 
-
+            System.out.println(); //apenas para o menu nao ficar grudado nas resposta.
             System.out.println(">>>> Menu Contato <<<<");
             System.out.println("1 - Adicionar Contato");
-            System.out.println("2 - Exibir Contato");
-            System.out.println("3 - Editar Contato");
-            System.out.println("4 - Remover Contato");
-            System.out.println("5 - Sair");
+            System.out.println("2 - Exibir Todos os Contatos");
+            System.out.println("3 - Buscar Contato");
+            System.out.println("4 - Editar Contato");
+            System.out.println("5 - Remover Contato");
+            System.out.printf("6 - Sair %n");
 
-            resposta = Integer.parseInt(Agenda.input.nextLine());
+
+            //resposta = Integer.parseInt(Agenda.input.nextLine());
+            resposta = Agenda.input.nextLine();
 
             switch (resposta) {
-                case 1:
-                    Agenda.adicionarContato(Agenda.matriz);
+                case "1":
+                    Agenda.adicionarContato();
                     break;
-                case 2:
+                case "2":
                     Agenda.exibirContatos();
                     break;
-                case 3:
-                    Agenda.editarContato(Agenda.matriz);
+                case "3":
+                    Agenda.buscarContato();
                     break;
-                case 4:
+                case "4":
+                    Agenda.editarContato();
+                    break;
+                case "5":
                     Agenda.removerContato();
                     break;
-                case 5:
-                    System.out.println("Saindo...");
+                case "6":
+                    System.out.printf("%n Saindo...");
                     break;
                 default:
-                    System.out.println("Insira uma opção válida");
+                    System.out.printf("%n Insira uma opção válida %n ");
 
             }
-        } while (resposta != 5);
+        } while (!resposta.equals("6"));
 
 
     }
 
+    public static void menuEdicao() {
+        Scanner input = new Scanner(System.in);
+        String resposta;
+
+            do {
+
+                System.out.println(); //apenas para o menu nao ficar grudado nas resposta.
+                System.out.println(">>>> Escolha <<<<");
+                System.out.println("1 - Mudança do nome");
+                System.out.println("2 - Mudança do telefone");
+                System.out.println("3 - Mudança do email");
+                System.out.println("4 - Editar todo o contato");
+                System.out.printf("6 - Sair %n");
+
+                resposta = Agenda.input.nextLine();
+
+            } while (!resposta.equals("6"));
     }
+
+}
 
 
 
