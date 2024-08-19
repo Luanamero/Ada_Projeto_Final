@@ -51,24 +51,24 @@ public class Menu {
 
     }
 
-    public static void menuEdicao() {
-        Scanner input = new Scanner(System.in);
-        String resposta;
-
-            do {
-
-                System.out.println(); //apenas para o menu nao ficar grudado nas resposta.
-                System.out.println(">>>> Escolha <<<<");
-                System.out.println("1 - Mudança do nome");
-                System.out.println("2 - Mudança do telefone");
-                System.out.println("3 - Mudança do email");
-                System.out.println("4 - Editar todo o contato");
-                System.out.printf("6 - Sair %n");
-
-                resposta = Agenda.input.nextLine();
-
-            } while (!resposta.equals("6"));
-    }
+//    public static void menuEdicao() {
+//        Scanner input = new Scanner(System.in);
+//        String resposta;
+//
+//            do {
+//
+//                System.out.println(); //apenas para o menu nao ficar grudado nas resposta.
+//                System.out.println(">>>> Escolha <<<<");
+//                System.out.println("1 - Mudança do nome");
+//                System.out.println("2 - Mudança do telefone");
+//                System.out.println("3 - Mudança do email");
+//                System.out.println("4 - Editar todo o contato");
+//                System.out.printf("6 - Sair %n");
+//
+//                resposta = Agenda.input.nextLine();
+//
+//            } while (!resposta.equals("6"));
+//    }
 
 }
 
