@@ -1,10 +1,7 @@
 import java.util.Scanner;
 
 
-
 public class Agenda {
-
-    //Temos que criar o readme
 
     static Scanner input = new Scanner(System.in);
     static int indiceDeContagem = 0;
