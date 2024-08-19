@@ -27,7 +27,7 @@ public class Agenda {
                 System.out.printf(question);
                 result = input.nextLine();
                 // int resultado = Integer.parseInt(result);
-                Integer.parseInt(result);
+                Long.parseLong(result);
                 break;
             } catch (Exception e) {
                 System.out.printf(messageError);
